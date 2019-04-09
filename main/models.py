@@ -4,7 +4,8 @@ from django.db import models
 
 class Category(models.Model):
 	name = models.CharField(max_length=500)
-	body = models.TextField()
+	def __str__(self):
+		return self.name
 
 class Category_Link(models.Model):
 	category1 = models.ForeignKey(
@@ -27,6 +28,8 @@ class Item(models.Model):
 	blank=True,
 	null=True,
 	)
+	def __str__(self):
+		return self.name
 
 class Tag(models.Model):
 	name = models.CharField(max_length=500)
