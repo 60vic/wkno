@@ -23,7 +23,8 @@ def item(request,item_id):
 def add(request):
 	#template = loader.get_template('main/add.html')
 	#context = { "123":x, }
-	render(request, 'main/add.html', {
-		'123': 'x',
-	})
+	#render(request, 'main/add.html', {
+	#	'123': 'x',
+	#})
 	#return HttpResponse(template.render(context, request))
+	return render(request, 'main/add.html', {'x' : 'question'})
